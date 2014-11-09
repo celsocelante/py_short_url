@@ -11,6 +11,6 @@ urlpatterns = patterns('',
 
     #url(r'^admin/', include(admin.site.urls)),
     #url(r'^$', index),
-    url(r'^api/([^/]+)',api_view),
+    url(r'^api/',api_view),
     url(r'([^/]+)', index_view),
 )
