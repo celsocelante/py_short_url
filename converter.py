@@ -1,4 +1,4 @@
-# Dictionary of Base62
+# Dictionary of Base62 (position is the key and chars, the value)
 base = ['0','1','2','3','4','5','6','7','8','9','a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z','A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
 
 # Function that converts any string (supposed to be a base62 number) to a correspondent decimal number
@@ -9,7 +9,7 @@ def toDecimal(string):
 
     return sum
 
-# Function that convert any integer number to a correspondent string (a base62 number)
+# Function that converts any integer number to a correspondent string (a base62 number)
 def toString(number):
     final_list = []
 
@@ -17,7 +17,7 @@ def toString(number):
     number = number/62
     final_list.append(base[remainder])
 
-    # Uses 'serie of divisions' method to convert any number to base62 string
+    # Uses 'serie of divisions' method to convert any number to a base62 string
     while (number > 62):
         remainder = number%62
         number = number/62
@@ -29,7 +29,7 @@ def toString(number):
     # Converts a list to a string
     final_string = ''.join(final_list)
 
-    # Fix the 0 in the left of string
+    # Fix the 0 in the left of some strings
     if(final_string[0] == '0'):
         final_string = final_string[1:]
 
