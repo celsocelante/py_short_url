@@ -9,6 +9,8 @@ urlpatterns = patterns('',
     # url(r'^$', 'py_short_url.views.home', name='home'),
     # url(r'^blog/', include('blog.urls')),
 
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', index),
+    #url(r'^admin/', include(admin.site.urls)),
+    #url(r'^$', index),
+    url(r'^api/([^/]+)',api_view),
+    url(r'([^/]+)', index_view),
 )
